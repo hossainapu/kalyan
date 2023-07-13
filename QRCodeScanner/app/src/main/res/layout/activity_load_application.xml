@@ -1,0 +1,559 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fitsSystemWindows="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="20dp"
+            >
+            <TextView
+                android:id="@+id/fieldPhoto"
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:text="Photo" />
+
+
+            <ImageView
+                android:id="@+id/valuePhoto"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginStart="20dp"
+            >
+
+            <TextView
+                android:id="@+id/fieldSignature"
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:text="Signature" />
+
+
+            <ImageView
+                android:id="@+id/valueSignature"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true" />
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:orientation="horizontal"
+            >
+            <TextView
+                android:id="@+id/fieldReferenceNumber"
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:text="Reference Number" />
+
+            <EditText
+                android:id="@+id/valueReferenceNumber"
+                style="@style/modifiedEditText"
+                android:layout_width="200dp"
+                android:hint="Reference Number"
+                android:inputType="none"
+                android:maxLines="1"
+                android:focusable="false"
+                android:enabled="false"
+                android:textIsSelectable="false"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:orientation="horizontal"
+            >
+
+            <TextView
+                android:id="@+id/fieldApplicationType"
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:text="Application Type" />
+
+
+            <EditText
+                android:id="@+id/valueApplicationType"
+                style="@style/modifiedEditText"
+                android:hint="Application Type"
+                android:layout_width="200dp"
+                android:inputType="none"
+                android:maxLines="1"
+                android:focusable="false"
+                android:enabled="false"
+                android:textIsSelectable="false"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:orientation="horizontal"
+            >
+            <TextView
+                android:id="@+id/fieldStatus"
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:text="Application Status" />
+
+
+            <EditText
+                android:id="@+id/valueStatus"
+                style="@style/modifiedEditText"
+                android:layout_width="200dp"
+                android:hint="Application Status"
+                android:inputType="none"
+                android:maxLines="1"
+                android:focusable="false"
+                android:enabled="false"
+                android:textIsSelectable="false"
+                />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:orientation="horizontal"
+            >
+
+            <TextView
+                android:id="@+id/fieldInstallment"
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:text="Installment Paid" />
+
+
+            <Button
+                android:id="@+id/buttonOne"
+                android:layout_marginLeft="10dp"
+                android:layout_width="30dp"
+                android:layout_height="wrap_content" />
+
+            <Button
+                android:id="@+id/buttonTwo"
+                android:layout_marginLeft="10dp"
+                android:layout_width="30dp"
+                android:layout_height="wrap_content" />
+
+            <Button
+                android:id="@+id/buttonThree"
+                android:layout_marginLeft="10dp"
+                android:layout_width="30dp"
+                android:layout_height="wrap_content" />
+
+            <Button
+                android:id="@+id/buttonFour"
+                android:layout_marginLeft="10dp"
+                android:layout_width="30dp"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:orientation="horizontal"
+            >
+            <TextView
+                android:id="@+id/fieldName"
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:text="Applicant Name" />
+
+
+            <EditText
+                android:id="@+id/valueName"
+                style="@style/modifiedEditText"
+                android:layout_width="200dp"
+                android:hint="Applicant Name"
+                android:inputType="none"
+                android:maxLines="1"
+                android:focusable="false"
+                android:enabled="false"
+                android:textIsSelectable="false"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:orientation="horizontal"
+            >
+            <TextView
+                android:id="@+id/fieldFather"
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:text="Father Name" />
+
+
+            <EditText
+                android:id="@+id/valueFather"
+                style="@style/modifiedEditText"
+                android:layout_width="200dp"
+                android:hint="Father Name"
+                android:inputType="none"
+                android:maxLines="1"
+                android:focusable="false"
+                android:enabled="false"
+                android:textIsSelectable="false"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:orientation="horizontal"
+            >
+            <TextView
+                android:id="@+id/fieldSpouse"
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:text="Spouse Name" />
+
+
+            <EditText
+                android:id="@+id/valueSpouse"
+                style="@style/modifiedEditText"
+                android:layout_width="200dp"
+                android:hint="Spouse Name"
+                android:inputType="none"
+                android:maxLines="1"
+                android:focusable="false"
+                android:enabled="false"
+                android:textIsSelectable="false"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:orientation="horizontal"
+            >
+            <TextView
+                android:id="@+id/fieldDateOfBirth"
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:text="Date Of Birth" />
+
+
+            <EditText
+                android:id="@+id/valueDateOfBirth"
+                style="@style/modifiedEditText"
+                android:layout_width="200dp"
+                android:hint="Date Of Birth"
+                android:inputType="none"
+                android:maxLines="1"
+                android:focusable="false"
+                android:enabled="false"
+                android:textIsSelectable="false"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:orientation="horizontal"
+            >
+            <TextView
+                android:id="@+id/fieldNID"
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:text="NID" />
+
+
+            <EditText
+                android:id="@+id/valueNID"
+                style="@style/modifiedEditText"
+                android:layout_width="200dp"
+                android:hint="NID"
+                android:inputType="none"
+                android:maxLines="1"
+                android:focusable="false"
+                android:enabled="false"
+                android:textIsSelectable="false"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:orientation="horizontal"
+            >
+            <TextView
+                android:id="@+id/fieldGender"
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:text="Gender" />
+
+
+            <EditText
+                android:id="@+id/valueGender"
+                style="@style/modifiedEditText"
+                android:layout_width="200dp"
+                android:hint="Gender"
+                android:inputType="none"
+                android:maxLines="1"
+                android:focusable="false"
+                android:enabled="false"
+                android:textIsSelectable="false"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:orientation="horizontal"
+            >
+            <TextView
+                android:id="@+id/fieldBloodGroup"
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:text="Blood Group" />
+
+
+            <EditText
+                android:id="@+id/valueBloodGroup"
+                style="@style/modifiedEditText"
+                android:layout_width="200dp"
+                android:hint="Blood Group"
+                android:inputType="none"
+                android:maxLines="1"
+                android:focusable="false"
+                android:enabled="false"
+                android:textIsSelectable="false"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:orientation="horizontal"
+            >
+            <TextView
+                android:id="@+id/fieldMaritalStatus"
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:text="Marital Status" />
+
+
+            <EditText
+                android:id="@+id/valueMaritalStatus"
+                style="@style/modifiedEditText"
+                android:layout_width="200dp"
+                android:hint="Marital Status"
+                android:inputType="none"
+                android:maxLines="1"
+                android:focusable="false"
+                android:enabled="false"
+                android:textIsSelectable="false"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:orientation="horizontal"
+            >
+            <TextView
+                android:id="@+id/fieldContactNumber"
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:text="Contact Number" />
+
+
+            <EditText
+                android:id="@+id/valueContactNumber"
+                style="@style/modifiedEditText"
+                android:layout_width="200dp"
+                android:hint="Contact Number"
+                android:inputType="none"
+                android:maxLines="1"
+                android:focusable="false"
+                android:enabled="false"
+                android:textIsSelectable="false"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:orientation="horizontal"
+            >
+            <TextView
+                android:id="@+id/fieldEmergencyName"
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:text="Emergency Name" />
+
+
+            <EditText
+                android:id="@+id/valueEmergencyName"
+                style="@style/modifiedEditText"
+                android:layout_width="200dp"
+                android:hint="Emergency Name"
+                android:inputType="none"
+                android:maxLines="1"
+                android:focusable="false"
+                android:enabled="false"
+                android:textIsSelectable="false"
+                />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:orientation="horizontal"
+            >
+            <TextView
+                android:id="@+id/fieldEmergencyContact"
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:text="Emergency Contact" />
+
+
+            <EditText
+                android:id="@+id/valueEmergencyContact"
+                style="@style/modifiedEditText"
+                android:layout_width="200dp"
+                android:hint="Emergency Contact"
+                android:inputType="none"
+                android:maxLines="1"
+                android:focusable="false"
+                android:enabled="false"
+                android:textIsSelectable="false"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:orientation="horizontal"
+            >
+            <TextView
+                android:id="@+id/fieldEmergencyRelation"
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:text="Emergency Relation" />
+
+
+            <EditText
+                android:id="@+id/valueEmergencyRelation"
+                style="@style/modifiedEditText"
+                android:layout_width="200dp"
+                android:hint="Emergency Relation"
+                android:inputType="none"
+                android:maxLines="1"
+                android:focusable="false"
+                android:enabled="false"
+                android:textIsSelectable="false"
+                />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:orientation="horizontal"
+            >
+            <TextView
+                android:id="@+id/fieldCurrentAddress"
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:text="Present Address" />
+
+
+            <EditText
+                android:id="@+id/valueCurrentAddress"
+                style="@style/modifiedEditText"
+                android:layout_width="wrap_content"
+                android:hint="Present Address"
+                android:inputType="none"
+                android:maxLines="3"
+                android:focusable="false"
+                android:enabled="false"
+                android:textIsSelectable="false"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:orientation="horizontal"
+            >
+            <TextView
+                android:id="@+id/fieldPermanentAddress"
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:text="Permanent Address" />
+
+
+            <EditText
+                android:id="@+id/valuePermanentAddress"
+                style="@style/modifiedEditText"
+                android:layout_width="wrap_content"
+                android:hint="Permanent Address"
+                android:inputType="none"
+                android:maxLines="3"
+                android:focusable="false"
+                android:enabled="false"
+                android:textIsSelectable="false"
+                />
+        </LinearLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/idGoBack"
+            style="@style/parent"
+            android:layout_marginTop="@dimen/loginViewsMargin"
+            android:layout_marginLeft="20dp"
+            >
+
+
+            <Button android:id="@+id/goBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Go Back"/>
+        </android.support.design.widget.TextInputLayout>
+
+    </LinearLayout>
+</ScrollView>

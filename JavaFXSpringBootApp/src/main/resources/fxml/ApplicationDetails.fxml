@@ -1,0 +1,533 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<BorderPane fx:id="borderPane" prefHeight="698.0" prefWidth="1300.0"  stylesheets="@../styles/Styles.css" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.codetreatise.controller.ApplicationDetailsController">
+    <top>
+        <MenuBar BorderPane.alignment="TOP_LEFT">
+            <menus>
+                <Menu mnemonicParsing="false" text="File">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#enrollApplication" text="Enroll Application" />
+                    </items>
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#showApplication" text="Show Application" />
+                    </items>
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#uploadApplication" text="Upload Application" />
+                    </items>
+
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#dashboard" text="Dashboard" />
+                    </items>
+
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#logout" text="Logout" />
+                    </items>
+
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#exit" text="Exit" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Edit">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="Delete" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Help">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="About" />
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+    </top>
+    <left>
+        <VBox fx:id="leftPanel" prefHeight="556.0" prefWidth="521.0" spacing="10.0" styleClass="background" stylesheets="@../styles/Styles.css" BorderPane.alignment="CENTER">
+            <children>
+                <Label text="Application Details" textFill="WHITE">
+                    <font>
+                        <Font size="20.0" />
+                    </font>
+                    <VBox.margin>
+                        <Insets bottom="10.0" left="20.0" top="10.0" />
+                    </VBox.margin>
+                </Label>
+
+                <HBox prefHeight="30.0" prefWidth="265.0">
+                    <VBox.margin>
+                        <Insets left="25.0" />
+                    </VBox.margin>
+                    <children>
+                        <Label prefHeight="26.0" prefWidth="163.0" text="Reference Number" textFill="WHITE">
+                            <font>
+                                <Font size="16.0" />
+                            </font>
+                        </Label>
+                        <TextField fx:id="referenceNumber" disable="true" editable="false" prefHeight="30.0" prefWidth="246.0" promptText="Reference Number" />
+                    </children>
+                </HBox>
+
+                <HBox prefHeight="30.0" prefWidth="265.0">
+                    <VBox.margin>
+                        <Insets left="25.0" />
+                    </VBox.margin>
+                    <children>
+                        <Label prefHeight="26.0" prefWidth="163.0" text="Name" textFill="WHITE">
+                            <font>
+                                <Font size="16.0" />
+                            </font>
+                        </Label>
+                        <TextField fx:id="personName" disable="true" editable="false" prefHeight="30.0" prefWidth="246.0" promptText="Name" />
+                    </children>
+                </HBox>
+
+                <HBox prefHeight="30.0" prefWidth="265.0">
+                    <VBox.margin>
+                        <Insets left="25.0" />
+                    </VBox.margin>
+                    <children>
+                        <Label prefHeight="26.0" prefWidth="163.0" text="Father Name" textFill="WHITE">
+                            <font>
+                                <Font size="16.0" />
+                            </font>
+                        </Label>
+                        <TextField fx:id="fatherName" disable="true" editable="false" prefHeight="30.0" prefWidth="246.0" promptText="Father Name" />
+                    </children>
+                </HBox>
+
+                <HBox prefHeight="30.0" prefWidth="265.0">
+                    <VBox.margin>
+                        <Insets left="25.0" />
+                    </VBox.margin>
+                    <children>
+                        <Label prefHeight="26.0" prefWidth="163.0" text="Spouse Name" textFill="WHITE">
+                            <font>
+                                <Font size="16.0" />
+                            </font>
+                        </Label>
+                        <TextField fx:id="spouseName" disable="true" editable="false" prefHeight="30.0" prefWidth="246.0" promptText="Spouse Name" />
+                    </children>
+                </HBox>
+
+                <HBox prefHeight="30.0" prefWidth="265.0">
+                    <VBox.margin>
+                        <Insets left="25.0" />
+                    </VBox.margin>
+                    <children>
+                        <Label prefHeight="26.0" prefWidth="163.0" text="Date Of Birth" textFill="WHITE">
+                            <font>
+                                <Font size="16.0" />
+                            </font>
+                        </Label>
+                        <TextField fx:id="dateOfBirth" prefHeight="30.0" prefWidth="246.0" disable="true" />
+                    </children>
+                </HBox>
+
+                <HBox prefHeight="30.0" prefWidth="265.0">
+                    <VBox.margin>
+                        <Insets left="25.0" />
+                    </VBox.margin>
+                    <children>
+                        <Label prefHeight="26.0" prefWidth="163.0" text="Gender" textFill="WHITE">
+                            <font>
+                                <Font size="16.0" />
+                            </font>
+                        </Label>
+
+                        <RadioButton fx:id="rbMale" disable="true" mnemonicParsing="false" selected="true" text="Male" textFill="WHITE" />
+                        <RadioButton fx:id="rbFemale" disable="true" mnemonicParsing="false" text="Female" textFill="WHITE">
+                            <HBox.margin>
+                                <Insets left="10.0" />
+                            </HBox.margin>
+                        </RadioButton>
+                        <RadioButton fx:id="rbThird" disable="true" mnemonicParsing="false" text="Third" textFill="WHITE">
+                            <HBox.margin>
+                                <Insets left="10.0" />
+                            </HBox.margin>
+                        </RadioButton>
+                    </children>
+                </HBox>
+
+                <HBox prefHeight="30.0" prefWidth="265.0">
+                    <VBox.margin>
+                        <Insets left="25.0" />
+                    </VBox.margin>
+                    <children>
+                        <Label prefHeight="26.0" prefWidth="163.0" text="Blood Group" textFill="WHITE">
+                            <font>
+                                <Font size="16.0" />
+                            </font>
+                        </Label>
+                        <TextField fx:id="bloodGroup" prefHeight="30.0" prefWidth="246.0" disable="true">
+                            <VBox.margin>
+                                <Insets left="25.0" />
+                            </VBox.margin>
+                        </TextField>
+                    </children>
+                </HBox>
+
+                <HBox prefHeight="30.0" prefWidth="265.0">
+                    <VBox.margin>
+                        <Insets left="25.0" />
+                    </VBox.margin>
+                    <children>
+                        <Label prefHeight="26.0" prefWidth="163.0" text="Marital Status" textFill="WHITE">
+                            <font>
+                                <Font size="16.0" />
+                            </font>
+                        </Label>
+                        <TextField fx:id="maritalStatus" prefHeight="30.0" prefWidth="246.0" disable="true">
+                            <VBox.margin>
+                                <Insets left="25.0" />
+                            </VBox.margin>
+                        </TextField>
+                    </children>
+                </HBox>
+
+                <HBox prefHeight="30.0" prefWidth="265.0">
+                    <VBox.margin>
+                        <Insets left="25.0" />
+                    </VBox.margin>
+                    <children>
+                        <Label prefHeight="26.0" prefWidth="163.0" text="NID Number" textFill="WHITE">
+                            <font>
+                                <Font size="16.0" />
+                            </font>
+                        </Label>
+                        <TextField fx:id="nidNumber" disable="true" editable="false" prefHeight="30.0" prefWidth="246.0" promptText="NID Number" />
+                    </children>
+                </HBox>
+
+                <HBox prefHeight="30.0" prefWidth="265.0">
+                    <VBox.margin>
+                        <Insets left="25.0" />
+                    </VBox.margin>
+                    <children>
+                        <Label prefHeight="26.0" prefWidth="163.0" text="Contact Number" textFill="WHITE">
+                            <font>
+                                <Font size="16.0" />
+                            </font>
+                        </Label>
+                        <TextField fx:id="contactNumber" disable="true" editable="false" prefHeight="30.0" prefWidth="246.0" promptText="Contact Number" />
+                    </children>
+                </HBox>
+
+                <HBox prefHeight="30.0" prefWidth="265.0">
+                    <VBox.margin>
+                        <Insets left="25.0" />
+                    </VBox.margin>
+                    <children>
+                        <Label prefHeight="26.0" prefWidth="163.0" text="Emergency Number" textFill="WHITE">
+                            <font>
+                                <Font size="16.0" />
+                            </font>
+                        </Label>
+                        <TextField fx:id="emergencyContactNumber" disable="true"  editable="false" prefHeight="30.0" prefWidth="246.0" promptText="Emergency Contact Number" />
+                    </children>
+                </HBox>
+
+                <HBox prefHeight="30.0" prefWidth="265.0">
+                    <VBox.margin>
+                        <Insets left="25.0" />
+                    </VBox.margin>
+                    <children>
+                        <Label prefHeight="26.0" prefWidth="163.0" text="Emergency Name" textFill="WHITE">
+                            <font>
+                                <Font size="16.0" />
+                            </font>
+                        </Label>
+                        <TextField fx:id="emergencyName" disable="true"  editable="false" prefHeight="30.0" prefWidth="246.0" promptText="Emergency Name" />
+                    </children>
+                </HBox>
+
+                <HBox prefHeight="30.0" prefWidth="265.0">
+                    <VBox.margin>
+                        <Insets left="25.0" />
+                    </VBox.margin>
+                    <children>
+                        <Label prefHeight="26.0" prefWidth="163.0" text="Emergency Relation" textFill="WHITE">
+                            <font>
+                                <Font size="16.0" />
+                            </font>
+                        </Label>
+                        <TextField fx:id="emergencyRelation" disable="true"  editable="false" prefHeight="30.0" prefWidth="246.0" promptText="Emergency Relation" />
+                    </children>
+                </HBox>
+
+                <HBox prefHeight="30.0" prefWidth="265.0">
+                    <VBox.margin>
+                        <Insets left="25.0" />
+                    </VBox.margin>
+                    <children>
+                        <Label prefHeight="26.0" prefWidth="163.0" text="Installment" textFill="WHITE">
+                            <font>
+                                <Font size="16.0" />
+                            </font>
+                        </Label>
+                        <Button fx:id="firstCheckBox" disable="true"/>
+                         <Label text="  "/>
+                        <Button fx:id="secondCheckBox" disable="true"/>
+                        <Label text="  "/>
+                        <Button fx:id="thirdCheckBox" disable="true"/>
+                        <Label text="  "/>
+                        <Button fx:id="fourthCheckBox" disable="true"/>
+                    </children>
+                </HBox>
+
+                <HBox prefHeight="30.0" prefWidth="250.0" spacing="10.0">
+                    <children>
+                        <Button fx:id="back" mnemonicParsing="false" onAction="#showApplication" prefHeight="30.0" prefWidth="75.0" style="-fx-background-color: red;" text="Back">
+                            <effect>
+                                <DropShadow blurType="ONE_PASS_BOX" color="#1965d0" />
+                            </effect>
+                        </Button>
+                    </children>
+                    <opaqueInsets>
+                        <Insets />
+                    </opaqueInsets>
+                    <VBox.margin>
+                        <Insets left="10.0" top="10.0"/>
+                    </VBox.margin>
+                </HBox>
+
+            </children>
+            <padding>
+                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+            </padding>
+            <BorderPane.margin>
+                <Insets />
+            </BorderPane.margin>
+        </VBox>
+    </left>
+    <center>
+        <VBox fx:id="centerPanel" prefHeight="556.0" prefWidth="521.0" spacing="10.0" styleClass="background" stylesheets="@../styles/Styles.css" BorderPane.alignment="CENTER">
+            <children>
+
+
+                <Label text="Present Address" textFill="WHITE">
+                    <font>
+                        <Font size="20.0" />
+                    </font>
+                    <VBox.margin>
+                        <Insets bottom="10.0" left="20.0" top="10.0" />
+                    </VBox.margin>
+                </Label>
+
+
+                <HBox prefHeight="30.0" prefWidth="265.0">
+                    <VBox.margin>
+                        <Insets left="25.0" />
+                    </VBox.margin>
+                    <children>
+                        <Label prefHeight="26.0" prefWidth="163.0" text="Division Name" textFill="WHITE">
+                            <font>
+                                <Font size="16.0" />
+                            </font>
+                        </Label>
+                        <TextField fx:id="cDivision" disable="true"  editable="false" prefHeight="30.0" prefWidth="246.0" promptText="Division Name" />
+                    </children>
+                </HBox>
+
+                <HBox prefHeight="30.0" prefWidth="265.0">
+                    <VBox.margin>
+                        <Insets left="25.0" />
+                    </VBox.margin>
+                    <children>
+                        <Label prefHeight="26.0" prefWidth="163.0" text="District Name" textFill="WHITE">
+                            <font>
+                                <Font size="16.0" />
+                            </font>
+                        </Label>
+                        <TextField fx:id="cDistrict" disable="true" editable="false" prefHeight="30.0" prefWidth="246.0" promptText="District Name" />
+                    </children>
+                </HBox>
+
+                <HBox prefHeight="30.0" prefWidth="265.0">
+                    <VBox.margin>
+                        <Insets left="25.0" />
+                    </VBox.margin>
+                    <children>
+                        <Label prefHeight="26.0" prefWidth="163.0" text="District Name" textFill="WHITE">
+                            <font>
+                                <Font size="16.0" />
+                            </font>
+                        </Label>
+                        <TextField fx:id="cThana" disable="true" editable="false" prefHeight="30.0" prefWidth="246.0" promptText="Thana Name" />
+                    </children>
+                </HBox>
+
+                <HBox prefHeight="30.0" prefWidth="265.0">
+                    <VBox.margin>
+                        <Insets left="25.0" />
+                    </VBox.margin>
+                    <children>
+                        <Label prefHeight="26.0" prefWidth="163.0" text="Address Line" textFill="WHITE">
+                            <font>
+                                <Font size="16.0" />
+                            </font>
+                        </Label>
+                        <TextField fx:id="cAddressLine" disable="true" editable="false" prefHeight="30.0" prefWidth="246.0" promptText="Address Line" />
+                    </children>
+                </HBox>
+
+                <Label text="Permanent Address" textFill="WHITE">
+                    <font>
+                        <Font size="20.0" />
+                    </font>
+                    <VBox.margin>
+                        <Insets bottom="10.0" left="20.0" top="10.0" />
+                    </VBox.margin>
+                </Label>
+                <HBox prefHeight="30.0" prefWidth="265.0">
+                    <VBox.margin>
+                        <Insets left="25.0" />
+                    </VBox.margin>
+                    <children>
+                        <Label prefHeight="26.0" prefWidth="163.0" text="Division Name" textFill="WHITE">
+                            <font>
+                                <Font size="16.0" />
+                            </font>
+                        </Label>
+                        <TextField fx:id="pDivision" disable="true" editable="false" prefHeight="30.0" prefWidth="246.0" promptText="Division Name">
+                            <VBox.margin>
+                                <Insets left="25.0" />
+                            </VBox.margin>
+                        </TextField>
+                    </children>
+                </HBox>
+
+                <HBox prefHeight="30.0" prefWidth="265.0">
+                    <VBox.margin>
+                        <Insets left="25.0" />
+                    </VBox.margin>
+                    <children>
+                        <Label prefHeight="26.0" prefWidth="163.0" text="District Name" textFill="WHITE">
+                            <font>
+                                <Font size="16.0" />
+                            </font>
+                        </Label>
+                        <TextField fx:id="pDistrict" disable="true" editable="false" prefHeight="30.0" prefWidth="246.0" promptText="District Name">
+                            <VBox.margin>
+                                <Insets left="25.0" />
+                            </VBox.margin>
+                        </TextField>
+                    </children>
+                </HBox>
+
+                <HBox prefHeight="30.0" prefWidth="265.0">
+                    <VBox.margin>
+                        <Insets left="25.0" />
+                    </VBox.margin>
+                    <children>
+                        <Label prefHeight="26.0" prefWidth="163.0" text="Thana Name" textFill="WHITE">
+                            <font>
+                                <Font size="16.0" />
+                            </font>
+                        </Label>
+                        <TextField fx:id="pThana" disable="true" prefHeight="30.0" prefWidth="246.0" promptText="Thana Name">
+                            <VBox.margin>
+                                <Insets left="25.0" />
+                            </VBox.margin>
+                        </TextField>
+                    </children>
+                </HBox>
+
+                <HBox prefHeight="30.0" prefWidth="265.0">
+                    <VBox.margin>
+                        <Insets left="25.0" />
+                    </VBox.margin>
+                    <children>
+                        <Label prefHeight="26.0" prefWidth="163.0" text="Address Line" textFill="WHITE">
+                            <font>
+                                <Font size="16.0" />
+                            </font>
+                        </Label>
+                        <TextField fx:id="pAddressLine" disable="true" editable="false" prefHeight="30.0" prefWidth="246.0" promptText="Address Line" />
+                    </children>
+                </HBox>
+
+                <HBox prefHeight="30.0" prefWidth="265.0">
+                    <VBox.margin>
+                        <Insets left="25.0" />
+                    </VBox.margin>
+                    <children>
+                        <Label prefHeight="26.0" prefWidth="163.0" text="Office Code" textFill="WHITE">
+                            <font>
+                                <Font size="16.0" />
+                            </font>
+                        </Label>
+                        <TextField fx:id="officeCode" disable="true" prefHeight="30.0" prefWidth="246.0" />
+                    </children>
+                </HBox>
+
+                <HBox prefHeight="30.0" prefWidth="265.0">
+                    <VBox.margin>
+                        <Insets left="25.0" />
+                    </VBox.margin>
+                    <children>
+                        <Label prefHeight="26.0" prefWidth="163.0" text="Transaction Number" textFill="WHITE">
+                            <font>
+                                <Font size="16.0" />
+                            </font>
+                        </Label>
+                        <TextField fx:id="bankTransactionNumber" disable="true" prefHeight="30.0" prefWidth="246.0" />
+                    </children>
+                </HBox>
+
+            </children>
+        </VBox>
+    </center>
+    <right>
+        <VBox fx:id="rightPanel" prefHeight="556.0" prefWidth="521.0" spacing="10.0" styleClass="background" stylesheets="@../styles/Styles.css" BorderPane.alignment="CENTER">
+            <children>
+
+                <HBox prefHeight="80" prefWidth="265">
+                    <VBox.margin>
+                        <Insets left="25.0" top="30.0"/>
+                    </VBox.margin>
+                    <children>
+                        <Label text="Photo" textFill="WHITE">
+                            <font>
+                                <Font size="20.0" />
+                            </font>
+                            <VBox.margin>
+                                <Insets bottom="10.0" left="20.0" top="10.0" />
+                            </VBox.margin>
+                        </Label>
+                        <ImageView fx:id="photo" fitHeight="250.0" fitWidth="250.0" pickOnBounds="true" preserveRatio="true" style="-fx-background-color: white;" />
+                    </children>
+                </HBox>
+
+                <HBox prefHeight="60" prefWidth="265">
+                    <VBox.margin>
+                        <Insets left="25.0" />
+                    </VBox.margin>
+                    <children>
+                        <Label text="Signature" textFill="WHITE">
+                            <font>
+                                <Font size="20.0" />
+                            </font>
+                            <VBox.margin>
+                                <Insets bottom="10.0" left="20.0" top="10.0" />
+                            </VBox.margin>
+                        </Label>
+                        <ImageView fx:id="signature" fitHeight="250.0" fitWidth="250.0" pickOnBounds="true" preserveRatio="true" style="-fx-background-color: white;" />
+                    </children>
+                </HBox>
+            </children>
+        </VBox>
+    </right>
+</BorderPane>

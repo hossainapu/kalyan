@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Pagination?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="698.0" prefWidth="1300.0" stylesheets="@../styles/Styles.css" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.codetreatise.controller.UploadApplicationController">
+    <children>
+        <BorderPane prefHeight="698.0" prefWidth="1300.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <top>
+                <MenuBar BorderPane.alignment="TOP_LEFT">
+                    <menus>
+                        <Menu mnemonicParsing="false" text="File">
+                            <items>
+                                <MenuItem mnemonicParsing="false" onAction="#enrollApplication" text="Enroll Application" />
+                            </items>
+                            <items>
+                                <MenuItem mnemonicParsing="false" onAction="#showApplication" text="Show Application" />
+                            </items>
+                            <items>
+                                <MenuItem mnemonicParsing="false" onAction="#uploadApplication" text="Upload Application" />
+                            </items>
+
+                            <items>
+                                <MenuItem mnemonicParsing="false" onAction="#dashboard" text="Dashboard" />
+                            </items>
+
+                            <items>
+                                <MenuItem mnemonicParsing="false" onAction="#logout" text="Logout" />
+                            </items>
+
+                            <items>
+                                <MenuItem mnemonicParsing="false" onAction="#exit" text="Exit" />
+                            </items>
+                        </Menu>
+                        <Menu mnemonicParsing="false" text="Edit">
+                            <items>
+                                <MenuItem mnemonicParsing="false" text="Delete" />
+                            </items>
+                        </Menu>
+                        <Menu mnemonicParsing="false" text="Help">
+                            <items>
+                                <MenuItem mnemonicParsing="false" text="About" />
+                            </items>
+                        </Menu>
+                    </menus>
+                </MenuBar>
+            </top>
+            <center>
+                <VBox prefHeight="155.0" prefWidth="1298.0" AnchorPane.bottomAnchor="190.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <children>
+                        <HBox prefHeight="53.0" prefWidth="1278.0">
+                            <VBox.margin>
+                                <Insets left="10.0" right="10.0" top="10.0" />
+                            </VBox.margin>
+                            <children>
+                                <Label prefHeight="36.0" prefWidth="111.0" text="Reference Number" />
+                                <TextField fx:id="sReferenceNumber" prefHeight="36.0" prefWidth="145.0" />
+                                <Label prefHeight="36.0" prefWidth="145.0" text="Name">
+                                    <HBox.margin>
+                                        <Insets left="10.0" />
+                                    </HBox.margin>
+                                </Label>
+                                <TextField fx:id="sName" prefHeight="36.0" prefWidth="145.0" />
+                                <Label prefHeight="36.0" prefWidth="145.0" text="Father Name">
+                                    <HBox.margin>
+                                        <Insets left="10.0" />
+                                    </HBox.margin>
+                                </Label>
+                                <TextField fx:id="sFatherName" prefHeight="36.0" prefWidth="145.0" />
+                                <Label prefHeight="36.0" prefWidth="145.0" text="NID">
+                                    <HBox.margin>
+                                        <Insets left="10.0" />
+                                    </HBox.margin>
+                                </Label>
+                                <TextField fx:id="sNID" prefHeight="36.0" prefWidth="145.0" />
+                            </children>
+                        </HBox>
+                        <HBox prefHeight="54.0" prefWidth="1278.0">
+                            <VBox.margin>
+                                <Insets left="10.0" right="10.0" top="10.0" />
+                            </VBox.margin>
+                            <children>
+                                <Label prefHeight="36.0" prefWidth="111.0" text="Contact Number" />
+                                <TextField fx:id="sContactNumber" prefHeight="36.0" prefWidth="145.0" />
+                                <Label prefHeight="36.0" prefWidth="145.0" text="Application Type">
+                                    <HBox.margin>
+                                        <Insets left="10.0" />
+                                    </HBox.margin>
+                                </Label>
+                                <ComboBox fx:id="sApplicationType" prefHeight="36.0" prefWidth="145.0" />
+                                <Label prefHeight="36.0" prefWidth="145.0" text="Number Of EMI Paid">
+                                    <HBox.margin>
+                                        <Insets left="10.0" />
+                                    </HBox.margin>
+                                </Label>
+                                <ComboBox fx:id="sEMIPaid" prefHeight="36.0" prefWidth="145.0" />
+                                <Label prefHeight="36.0" prefWidth="38.0" text="From">
+                                    <HBox.margin>
+                                        <Insets left="10.0" />
+                                    </HBox.margin>
+                                </Label>
+                                <DatePicker fx:id="sFromDate" prefHeight="36.0" prefWidth="120.0" />
+                                <Label prefHeight="36.0" prefWidth="30.0" text="To">
+                                    <HBox.margin>
+                                        <Insets left="5.0" />
+                                    </HBox.margin>
+                                </Label>
+                                <DatePicker fx:id="sToDate" prefHeight="36.0" prefWidth="120.0" />
+                                <Button fx:id="sSearch" mnemonicParsing="false" onAction="#searchApplication" prefHeight="36.0" text="Search">
+                                    <HBox.margin>
+                                        <Insets left="10.0" />
+                                    </HBox.margin>
+                                </Button>
+                            </children>
+                        </HBox>
+                        <HBox prefHeight="23.0" prefWidth="1300.0">
+                     <children>
+                        <Button fx:id="btnSelectAll" mnemonicParsing="false" text="Select All">
+                           <HBox.margin>
+                              <Insets bottom="30.0" left="30.0" top="30.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button fx:id="btnUpload" mnemonicParsing="false" prefHeight="28.0" prefWidth="140.0" text="Upload">
+                           <HBox.margin>
+                              <Insets left="30.0" top="30.0" />
+                           </HBox.margin>
+                        </Button>
+                        <ImageView fx:id="idServerStatus" fitHeight="46.0" fitWidth="67.0" pickOnBounds="true" preserveRatio="true">
+                           <HBox.margin>
+                              <Insets left="30.0" top="20.0" />
+                           </HBox.margin>
+                        </ImageView>
+                     </children>
+                        </HBox>
+
+                        <TableView fx:id="uploadTable" layoutX="246.0" layoutY="14.0" prefHeight="400.0" prefWidth="1300.0">
+                            <columns>
+                                <TableColumn fx:id="tSelect" prefWidth="108.00" text="Select" />
+                                <TableColumn fx:id="tApplicationId" prefWidth="108.00" text="Application Id" />
+                                <TableColumn fx:id="tReferenceNumber" prefWidth="132.0" text="Reference Number" />
+                                <TableColumn fx:id="tApplicantName" prefWidth="145.0" text="Applicant Name" />
+                                <TableColumn fx:id="tApplicationType" prefWidth="146.0" text="Application Type" />
+                                <TableColumn fx:id="tDateOfBirth" prefWidth="146.0" text="Date Of Birth" />
+                                <TableColumn fx:id="tContactNumber" prefWidth="146.0" text="Contact Number" />
+                                <TableColumn fx:id="tTotalEMIPaid" prefWidth="205.0" text="Total EMI Paid" />
+                                <TableColumn fx:id="tStatus" prefWidth="156.0" text="Status" />
+                            </columns>
+                        </TableView>
+                    </children>
+                </VBox>
+            </center>
+         <bottom>
+            <Pagination fx:id="pagination" layoutX="246.0" layoutY="14.0" pageCount="1" prefHeight="400.0" prefWidth="1300.0" BorderPane.alignment="CENTER" />
+         </bottom>
+        </BorderPane>
+    </children>
+</AnchorPane>
